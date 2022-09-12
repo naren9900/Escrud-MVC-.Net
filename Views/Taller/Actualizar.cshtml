@@ -1,0 +1,36 @@
+﻿@using proyectoMVC.Models;
+@model Taller;
+
+@{
+    ViewData["title"] = "Actualizar";
+}
+<form method="post" asp-controller="Taller" asp-action="Actualizar" class="row g-3">
+  <div class="col-md-4">
+    <label for="validationDefault01" class="form-label">Nombre</label>
+    <input asp-for="NombreTienda" type="text" class="form-control" id="nombretienda"  required/>
+    <span asp-validation-for="NombreTienda" class="text-danger"></span>
+  </div>
+
+  <div class="col-md-4">
+    <label for="validationDefault01" class="form-label">Direccion</label>
+    <input asp-for="Direccion" type="text" class="form-control"  id="direccion"  required"/>
+    <span asp-validation-for="Direccion" class="text-danger"></span>
+  </div>
+
+  <div class="col-md-4">
+    <label for="validationDefault01" class="form-label">Telefono</label>
+    <input asp-for="Telefono" type="text" class="form-control"  id="telefono" required/>
+    <span asp-validation-for="Telefono" class="text-danger"></span>
+  </div>
+
+
+  <div class="col-md-2">
+    <label for="validationDefault01" class="form-label">Empleado</label>
+    <input asp-for="Empleado" type="text" class="form-control"  id="empleado" required/>
+    <span asp-validation-for="Empleado" class="text-danger"></span>
+  </div>
+
+  <div class="col-12">
+    <input type ="submit" value="Enviar" class="btn btn btn-outline-dark"/>
+  </div>
+</form>
